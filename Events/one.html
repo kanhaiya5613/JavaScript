@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aqua;">
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://tse1.mm.bing.net/th/id/OIP.zB1rsS80G2GPbY0mMvKnigHaEK?pid=Api&P=0&h=180" alt="photoshop"</li>
+            <li><img width="200px" id="japan" src="https://tse4.mm.bing.net/th/id/OIP.K-RfkiB1fwO_Paz-9A2kdwHaEo?pid=Api&P=0&h=180" alt=""</li>
+            <li><a href="https://google.com" id="google" style="color: blue;"> Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('photoshop').onclick = function(){
+    //     alert("photoshop clicked")
+    //}
+     // AttackEvent()
+    // Jquery - on
+    // document.getElementById('photoshop').addEventListener('click',function(e){
+    //     console.log(e)
+    //     alert("owl clicked again")
+    // },false)
+
+//    type, timestamXp. defaultprevent
+// // target, timestamp,srcElement,currentTarget
+// // clientX, clintY, screenX,screenY
+// // altkey, ctrlkey, shiftkey,keycode
+
+// document.getElementById('images').addEventListener('click',function(e){
+//         console.log("Image clicked")
+//         // alert("Image clicked")
+//     },false)
+// document.getElementById('photoshop').addEventListener('click',function(e){
+//         console.log("owl clicked")
+//         //alert("owl clicked again")
+//     },false)
+
+
+document.querySelector('#images').addEventListener('click',function(e){
+    console.log(e.target.parentNode)
+    if(e.target.tagName==='IMG'){
+        console.log(e.target.id);
+        let removeIt = e.target.parentNode
+        removeIt.remove()
+    }
+    //let removeit = e.target.parentNode
+    //removeit.remove()
+    //removeit.parentNode.removeChild(removeit)
+})
+
+
+</script>
+</html>
