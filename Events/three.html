@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:#616161 ; color: aqua;">
+    <h1>Hello EveryOne</h1>
+     <Button id="Start">Start</Button>
+    <Button id="stop">Stop</Button>
+   
+</body>
+<script>
+    const sayDate = function(){
+        console.log(Date.now());
+    }
+    let start;
+   const Start = document.querySelector("#Start").addEventListener('click',function(){
+    start=setInterval(sayDate,2000)
+   })
+   document.querySelector("#stop").addEventListener('click',function(){
+    clearInterval(start)
+   })
+</script>
+</html>
