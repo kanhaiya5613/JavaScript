@@ -7,14 +7,11 @@
 </head>
 <body>
     <Button id="Start">Start</Button>
-    <Button id="Stop">Stop</Button>
 </body>
 <script>
     const requestUrl = 'https://api.github.com/users/kanhaiya5613';
     const xhr = new XMLHttpRequest();
-
     xhr.open('GET', requestUrl);
-
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
 
@@ -27,7 +24,6 @@
                 <img src="${Profile_pic}" alt="Profile pic" width="150">
                 <h3>Followers: ${followers}</h3>
             `;
-
             const div = document.createElement('div');
             div.innerHTML = innerContent;
             document.body.appendChild(div);
